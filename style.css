@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Raleway:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Della Respira', sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 0px;
+}
+
+
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-size: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFCCDD;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #FFCCDD;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+} 
+
+
+
+.social-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    background-color: #FFCCDD; 
+    display: flex;
+    justify-content: center;
+    padding: 15px 0; 
+    
+}
+
+.social-navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.social-navbar ul li {
+    margin: 0 1.2vw;
+    font-size: 20px 0;
+    position: relative;
+
+}
+
+.social-navbar ul li a {
+    text-decoration: none;
+    color: #4B3AE9;
+}
+
+.social-navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #4B3AE9;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.social-navbar ul li:hover::after {
+    width: 100%;
+}
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
+    color: #FFCCDD;
+}
+.content h1{
+    font-family: 'Della Respira', sans-serif;
+    font-size: 50px;
+}
+
+
+ .content2 {
+    width: 70%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    position: relative;
+    bottom: -40%;
+    text-align: justify; 
+    margin: 0 auto;
+    color: #FFCCDD;
+    max-width: 500px;
+    
+}
+
+
+
+
+#florist{
+    border: 10px solid #FFCCDD;
+    max-height: 300px;
+    height: 40vw;
+    width: auto;
+    
+}
+
+
+.content3{
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    color: #FFCCDD;
+}
+.content3 h1{
+    font-family: 'Della Respira', sans-serif;
+    font-size: 40px;
+}
+
+
+ .content4 {
+    width: 70%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    top: 2%;
+    position: relative;
+    text-align: justify; 
+    margin: 0 auto;
+    color: #FFCCDD;
+    max-width: 500px;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.column {
+    padding: 3vw;
+    color: #FFCCDD;
+    max-width: 250px;
+}
+
+
+@media (max-width: 600px) {
+    .store .row{
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .store .banner{
+        height: 100%;
+        padding-bottom: 60px;
+    }
+
+} 
+
+@media (max-width: 950px)  {
+    
+    .store .banner{
+        height: 100%;
+        padding-bottom: 80px;
+    }
+
+}  
+
+.column figcaption {
+    text-align: center;
+    word-spacing: 0.5em
+  }
+
+
+
+  
