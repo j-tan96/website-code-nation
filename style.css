@@ -6,7 +6,7 @@
     font-family: 'Della Respira', sans-serif;
 }
 
-.banner {
+.content {
     width: 100%;
     height: 100vh;
     
@@ -17,7 +17,10 @@
     padding-bottom: 0px;
 }
 
-
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
 
 .navbar {
     width: 90%;
@@ -26,18 +29,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 } 
-
-
-.logo {
-    width: 120px;
-    cursor: pointer;
-}
 
 .navbar ul li {
     list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 2vw;
     position: relative;
     font-size: 20px;
 }
@@ -63,7 +61,111 @@
     width: 100%;
 } 
 
+#florist{
+    border: 10px solid #FFCCDD;
+    max-height: 300px;
+    height: 40vw;
+    width: auto; 
+}
 
+.welcome{
+    width: 100%;
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
+    color: #FFCCDD;
+}
+.welcome h1{
+    font-family: 'Della Respira', sans-serif;
+    font-size: 50px;
+}
+
+.intro {
+    width: 70%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    position: relative;
+    bottom: -40%;
+    text-align: justify; 
+    margin: 0 auto;
+    color: #FFCCDD;
+    max-width: 500px;
+    
+}
+
+.store-heading{
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    color: #FFCCDD;
+}
+
+.store-heading h1{
+    font-family: 'Della Respira', sans-serif;
+    font-size: 40px;
+}
+
+.store-description {
+    width: 70%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    top: 2%;
+    position: relative;
+    text-align: justify; 
+    margin: 0 auto;
+    color: #FFCCDD;
+    max-width: 500px;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.picture {
+    padding: 3vw;
+    color: #FFCCDD;
+    max-width: 250px;
+}
+
+.picture figcaption {
+    text-align: center;
+    word-spacing: 0.5em
+}
+
+@media (max-width: 600px) {
+
+    .store .flexbox{
+      flex-direction: picture;
+      align-items: center;
+    }
+
+    .store .content{
+        height: 100%;
+        padding-bottom: 60px;
+    }
+
+    .store .store-heading{
+        position: relative;
+    }
+
+} 
+
+@media (max-width: 950px)  {
+    
+    .store .content{
+        height: 100%;
+        padding-bottom: 80px;
+    }
+
+    .store .store-heading{
+        position: relative;
+    }
+
+}  
 
 .social-navbar {
     position: fixed;
@@ -75,14 +177,12 @@
     display: flex;
     justify-content: center;
     padding: 15px 0; 
-    
 }
 
 .social-navbar ul {
     list-style: none;
     display: flex;
     align-items: center;
-    
 }
 
 .social-navbar ul li {
@@ -111,112 +211,3 @@
 .social-navbar ul li:hover::after {
     width: 100%;
 }
-
-
-.content{
-    width: 100%;
-    position: absolute;
-    bottom: 40%;
-    text-align: center;
-    color: #FFCCDD;
-}
-.content h1{
-    font-family: 'Della Respira', sans-serif;
-    font-size: 50px;
-}
-
-
- .content2 {
-    width: 70%;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    position: relative;
-    bottom: -40%;
-    text-align: justify; 
-    margin: 0 auto;
-    color: #FFCCDD;
-    max-width: 500px;
-    
-}
-
-
-
-
-#florist{
-    border: 10px solid #FFCCDD;
-    max-height: 300px;
-    height: 40vw;
-    width: auto;
-    
-}
-
-
-.content3{
-    width: 100%;
-    position: absolute;
-    top: 15%;
-    text-align: center;
-    color: #FFCCDD;
-}
-.content3 h1{
-    font-family: 'Della Respira', sans-serif;
-    font-size: 40px;
-}
-
-
- .content4 {
-    width: 70%;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    top: 2%;
-    position: relative;
-    text-align: justify; 
-    margin: 0 auto;
-    color: #FFCCDD;
-    max-width: 500px;
-    
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-.column {
-    padding: 3vw;
-    color: #FFCCDD;
-    max-width: 250px;
-}
-
-
-@media (max-width: 600px) {
-    .store .row{
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .store .banner{
-        height: 100%;
-        padding-bottom: 60px;
-    }
-
-} 
-
-@media (max-width: 950px)  {
-    
-    .store .banner{
-        height: 100%;
-        padding-bottom: 80px;
-    }
-
-}  
-
-.column figcaption {
-    text-align: center;
-    word-spacing: 0.5em
-  }
-
-
-
-  
