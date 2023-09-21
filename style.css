@@ -4,62 +4,68 @@
     margin: 0;
     padding: 0;
     font-family: 'Della Respira', sans-serif;
+    max-height: 100%;
 }
 
 .content {
     width: 100%;
     height: 100vh;
-    
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(back.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center;
-    padding-bottom: 0px;
 }
 
 .logo {
     width: 120px;
     cursor: pointer;
+    margin: 0 2vw;
 }
 
 .navbar {
-    width: 90%;
-    margin: auto;
-    padding: 35px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(#ffbbd1 30%, #FFCCDD 60%, #ffd9e6 90%, transparent 100%);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0; 
+}
+
+.navbar ul {
+    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
-} 
+}
 
 .navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 2vw;
+    margin: 0 3vw;
+    font-size: 24px;
     position: relative;
-    font-size: 20px;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    font-weight: bold;
-    color: #FFCCDD;
+    color: #4B3AE9;
 }
 
 .navbar ul li::after {
     content: '';
     height: 3px;
     width: 0%;
-    background: #FFCCDD;
+    background: #4B3AE9;
     position: absolute;
     left: 0;
-    bottom: -10px;
+    bottom: -5px;
     transition: 0.5s;
 }
 
 .navbar ul li:hover::after {
     width: 100%;
-} 
+}
+
 
 #florist{
     border: 10px solid #FFCCDD;
@@ -68,50 +74,64 @@
     width: auto; 
 }
 
-.welcome{
+.welcome {
     width: 100%;
     position: absolute;
-    bottom: 40%;
+    top: 225px;
+    padding-bottom: 100px;
     text-align: center;
     color: #FFCCDD;
 }
+
 .welcome h1{
     font-family: 'Della Respira', sans-serif;
     font-size: 50px;
 }
 
-.intro {
-    width: 70%;
+.welcome p{
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    position: relative;
-    bottom: -40%;
-    text-align: justify; 
-    margin: 0 auto;
+    text-align: justify;
     color: #FFCCDD;
+    padding: 0 60px;
+    margin: 0 auto;
     max-width: 500px;
-    
 }
 
-.store-heading{
+.intro{
     width: 100%;
     position: absolute;
-    top: 15%;
+    bottom: 10%;
+}
+
+.intro p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    color: #FFCCDD;
+    padding: 0 60px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.store-description{
+    width: 100%;
+    position: absolute;
+    top: 225px;
+    padding-bottom: 80px;
     text-align: center;
     color: #FFCCDD;
 }
 
-.store-heading h1{
+.store-description h1{
     font-family: 'Della Respira', sans-serif;
     font-size: 40px;
 }
 
-.store-description {
+.store-description p{
     width: 70%;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
-    top: 2%;
-    position: relative;
     text-align: justify; 
     margin: 0 auto;
     color: #FFCCDD;
@@ -121,8 +141,8 @@
 .flexbox {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     justify-content: center;
-    
 }
 
 .picture {
@@ -136,36 +156,54 @@
     word-spacing: 0.5em
 }
 
-@media (max-width: 600px) {
+@media (max-height: 950px) {
+    .content{
+        height: 950px;
+    } 
+}
 
-    .store .flexbox{
+@media (max-width: 1850px)  {
+    .store .content{
+        height: 100%;
+        padding-bottom: 1100px;
+    } 
+    .store .store-description h1{
+        position: relative;
+    }
+}  
+
+@media (max-width: 950px)  {
+    .store .content{
+        height: 100%;
+        padding-bottom: 1250px;
+    } 
+    .store .store-description h1{
+        position: relative;
+    }
+}  
+
+@media (max-width: 600px) {
+    .flexbox{
       flex-direction: picture;
       align-items: center;
     }
-
     .store .content{
         height: 100%;
-        padding-bottom: 60px;
+        padding-bottom: 1750px;
     }
-
-    .store .store-heading{
+    .store .store-description h1{
         position: relative;
     }
-
+    .navbar .logo{
+        width:100px;
+    }
+    .navbar ul li {
+        font-size: 20px;
+    }
+    .welcome{
+        top: 180px;
+    }
 } 
-
-@media (max-width: 950px)  {
-    
-    .store .content{
-        height: 100%;
-        padding-bottom: 80px;
-    }
-
-    .store .store-heading{
-        position: relative;
-    }
-
-}  
 
 .social-navbar {
     position: fixed;
@@ -187,7 +225,7 @@
 
 .social-navbar ul li {
     margin: 0 1.2vw;
-    font-size: 20px 0;
+    font-size: 16px;
     position: relative;
 
 }
